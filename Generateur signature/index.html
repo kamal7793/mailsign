@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Générateur de Signatures Email Professionnel</title>
+  <meta name="description" content="Créez des signatures email professionnelles en quelques clics avec protection anti-téléchargement">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📧</text></svg>">
+</head>
+
+<body>
+  <div class="container">
+      <div class="header">
+          <h1>📧 Générateur de Signature Email</h1>
+          <p>Créez une signature professionnelle en quelques clics avec protection intégrée</p>
+          <div class="features-badges">
+              <span class="badge">🔒 Protection Anti-téléchargement</span>
+              <span class="badge">📱 Responsive</span>
+              <span class="badge">⚡ Instantané</span>
+          </div>
+      </div>
+
+      <div class="main-content">
+          <!-- Formulaire de configuration -->
+          <div class="form-section">
+              <div class="form-group">
+                  <h2>📝 Informations personnelles</h2>
+                  <div class="input-group">
+                      <label for="name">
+                          Nom complet *
+                          <span class="required">Obligatoire</span>
+                      </label>
+                      <input type="text" id="name" placeholder="Jean Dupont" autocomplete="name" required>
+                      <small class="help-text">Votre nom et prénom complets</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="title">Titre/Poste</label>
+                      <input type="text" id="title" placeholder="Directeur Marketing" autocomplete="organization-title">
+                      <small class="help-text">Votre fonction dans l'entreprise</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="email">Email professionnel</label>
+                      <input type="email" id="email" placeholder="jean@entreprise.com" autocomplete="email">
+                      <small class="help-text">Votre adresse email principale</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="company">Entreprise</label>
+                      <input type="text" id="company" placeholder="Mon Entreprise" autocomplete="organization">
+                      <small class="help-text">Nom de votre société</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="phone">Téléphone</label>
+                      <input type="tel" id="phone" placeholder="+33 1 23 45 67 89" autocomplete="tel">
+                      <small class="help-text">Numéro de téléphone professionnel</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="website">Site Web</label>
+                      <input type="url" id="website" placeholder="www.monentreprise.com" autocomplete="url">
+                      <small class="help-text">URL de votre site web (sans https://)</small>
+                  </div>
+
+                  <!-- Nouveaux champs -->
+                  <div class="input-group">
+                      <label for="address">Adresse (optionnel)</label>
+                      <input type="text" id="address" placeholder="123 Rue de la Paix, 75001 Paris" autocomplete="street-address">
+                      <small class="help-text">Adresse physique de l'entreprise</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="linkedin">LinkedIn (optionnel)</label>
+                      <input type="url" id="linkedin" placeholder="linkedin.com/in/votre-profil">
+                      <small class="help-text">Lien vers votre profil LinkedIn</small>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <h2>🖼️ Logo de l'entreprise</h2>
+                  
+                  <div class="logo-upload">
+                      <input type="file" id="logoInput" accept="image/*" style="display: none;" aria-label="Choisir un fichier logo">
+                      <button type="button" id="uploadBtn" class="upload-btn">
+                          📁 Choisir un logo
+                          <span class="file-info">PNG, JPG, SVG - Max 2MB</span>
+                      </button>
+                      <div id="logoPreview" class="logo-preview" style="display: none;">
+                          <img id="logoImg" src="" alt="Logo de l'entreprise">
+                          <button type="button" id="removeLogo" class="remove-btn" aria-label="Supprimer le logo">❌</button>
+                      </div>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="logoSize">Taille du logo : <span id="logoSizeValue">60</span>px</label>
+                      <input type="range" id="logoSize" min="30" max="120" value="60" step="5">
+                      <div class="range-labels">
+                          <span>30px</span>
+                          <span>120px</span>
+                      </div>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="logoPosition">Position du logo</label>
+                      <select id="logoPosition">
+                          <option value="left">À gauche du texte</option>
+                          <option value="right">À droite du texte</option>
+                          <option value="top">Au-dessus du texte</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <h2>🎨 Style et apparence</h2>
+
+                  <div class="input-group">
+                      <label for="template">Modèle de design</label>
+                      <select id="template">
+                          <option value="modern">Moderne (recommandé)</option>
+                          <option value="classic">Classique</option>
+                          <option value="minimal">Minimal</option>
+                          <option value="elegant">Élégant</option>
+                          <option value="corporate">Corporate</option>
+                      </select>
+                      <small class="help-text">Le style général de votre signature</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="fontFamily">Police de caractères</label>
+                      <select id="fontFamily">
+                          <option value="Arial">Arial (recommandé)</option>
+                          <option value="Helvetica">Helvetica</option>
+                          <option value="Times New Roman">Times New Roman</option>
+                          <option value="Georgia">Georgia</option>
+                          <option value="Verdana">Verdana</option>
+                          <option value="Calibri">Calibri</option>
+                          <option value="Trebuchet MS">Trebuchet MS</option>
+                          <option value="Tahoma">Tahoma</option>
+                          <option value="Segoe UI">Segoe UI</option>
+                      </select>
+                      <small class="help-text">Police compatible avec tous les clients email</small>
+                  </div>
+
+                  <div class="input-group">
+                      <label for="fontSize">Taille de police : <span id="fontSizeValue">16</span>px</label>
+                      <input type="range" id="fontSize" min="12" max="24" value="16" step="1">
+                      <div class="range-labels">
+                          <span>12px</span>
+                          <span>24px</span>
+                      </div>
+                  </div>
+
+                  <div class="color-group">
+                      <div class="input-group">
+                          <label for="textColor">Couleur du texte</label>
+                          <input type="color" id="textColor" value="#333333">
+                          <span class="color-preview" style="background-color: #333333;"></span>
+                      </div>
+                      <div class="input-group">
+                          <label for="accentColor">Couleur d'accent</label>
+                          <input type="color" id="accentColor" value="#007bff">
+                          <span class="color-preview" style="background-color: #007bff;"></span>
+                      </div>
+                  </div>
+
+                  <!-- Options avancées -->
+                  <div class="advanced-options">
+                      <h3>⚙️ Options avancées</h3>
+                      
+                      <div class="input-group">
+                          <label>
+                              <input type="checkbox" id="includeSocial" checked>
+                              Inclure les réseaux sociaux
+                          </label>
+                      </div>
+
+                      <div class="input-group">
+                          <label>
+                              <input type="checkbox" id="includeDisclaimer">
+                              Ajouter une clause de confidentialité
+                          </label>
+                      </div>
+
+                      <div class="input-group">
+                          <label>
+                              <input type="checkbox" id="mobileOptimized" checked>
+                              Optimisation mobile
+                          </label>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="button-group">
+                  <button type="button" id="resetBtn" class="btn btn-secondary">
+                      🔄 Réinitialiser
+                  </button>
+                  <button type="button" id="previewBtn" class="btn btn-info">
+                      👁️ Prévisualiser
+                  </button>
+              </div>
+          </div>
+
+          <!-- Aperçu de la signature -->
+          <div class="preview-section">
+              <div class="preview-header">
+                  <h2>👁️ Aperçu en temps réel</h2>
+                  <div class="preview-controls">
+                      <button type="button" id="previewDesktop" class="preview-btn active">💻 Desktop</button>
+                      <button type="button" id="previewMobile" class="preview-btn">📱 Mobile</button>
+                  </div>
+              </div>
+
+              <div class="signature-container" id="signatureContainer">
+                  <div id="signaturePreview" class="signature-preview">
+                      <p class="placeholder">
+                          ✨ Remplissez le formulaire pour voir votre signature
+                          <br><small>La prévisualisation se met à jour automatiquement</small>
+                      </p>
+                  </div>
+              </div>
+
+              <div class="signature-stats">
+                  <div class="stat">
+                      <span class="stat-label">Taille estimée :</span>
+                      <span id="signatureSize">0 KB</span>
+                  </div>
+                  <div class="stat">
+                      <span class="stat-label">Compatibilité :</span>
+                      <span id="compatibilityScore">100%</span>
+                  </div>
+              </div>
+
+              <div class="button-group">
+                  <button type="button" id="copyBtn" class="btn btn-primary" disabled>
+                      📋 Copier la signature
+                  </button>
+                  <button type="button" id="downloadBtn" class="btn btn-success" disabled>
+                      💾 Télécharger HTML
+                  </button>
+                  <button type="button" id="testBtn" class="btn btn-info" disabled>
+                      📧 Test par email
+                  </button>
+              </div>
+
+              <div class="tips">
+                  <h3>💡 Guide d'utilisation</h3>
+                  <div class="tips-grid">
+                      <div class="tip-card">
+                          <h4>📋 Copier</h4>
+                          <p>Utilisez le bouton "Copier" pour coller directement dans votre client email (Gmail, Outlook, etc.)</p>
+                      </div>
+                      <div class="tip-card">
+                          <h4>💾 Télécharger</h4>
+                          <p>Le fichier HTML contient votre signature avec les instructions d'installation</p>
+                      </div>
+                      <div class="tip-card">
+                          <h4>🔒 Protection</h4>
+                          <p>Votre signature inclut une protection anti-téléchargement des images</p>
+                      </div>
+                      <div class="tip-card">
+                          <h4>📱 Mobile</h4>
+                          <p>Testez l'affichage mobile avec le bouton de prévisualisation</p>
+                      </div>
+                  </div>
+
+                  <div class="compatibility-info">
+                      <h4>✅ Compatible avec :</h4>
+                      <div class="compatibility-list">
+                          <span class="compatible">Gmail</span>
+                          <span class="compatible">Outlook</span>
+                          <span class="compatible">Apple Mail</span>
+                          <span class="compatible">Thunderbird</span>
+                          <span class="compatible">Yahoo Mail</span>
+                          <span class="compatible">Webmail</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Modal de succès -->
+      <div id="successModal" class="modal" style="display: none;">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>✅ Signature créée avec succès !</h2>
+              <p>Votre signature professionnelle est prête à être utilisée.</p>
+              <div class="modal-buttons">
+                  <button type="button" id="modalCopyBtn" class="btn btn-primary">📋 Copier maintenant</button>
+                  <button type="button" id="modalDownloadBtn" class="btn btn-success">💾 Télécharger</button>
+              </div>
+          </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+          <p>&copy; 2024 Générateur de Signature Email - Créé avec ❤️ pour les professionnels</p>
+          <div class="footer-links">
+              <a href="#privacy">Confidentialité</a>
+              <a href="#terms">Conditions</a>
+              <a href="#support">Support</a>
+          </div>
+      </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  
+  <!-- Analytics optionnel -->
+  <script>
+      // Tracking des interactions (optionnel)
+      console.log('📧 Générateur de Signature Email chargé');
+  </script>
+</body>
+
+</html>
