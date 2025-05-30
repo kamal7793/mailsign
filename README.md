@@ -1,3 +1,3 @@
-# G‚n‚rateur de Signatures Email 
+# GÃ©nÃ©rateur de Signatures Email 
  
-G‚n‚rateur professionnel de signatures email. 
+GÃ©nÃ©rateur professionnel de signatures email. 
